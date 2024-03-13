@@ -61,7 +61,7 @@ body{
 .imageStyle:hover{
     cursor: crosshair;
     filter: grayscale(0);
-    border-radius: 40px;
+    border-radius: 25px;
     transition: all 250ms ease-in;
 }
 
@@ -75,9 +75,16 @@ h3{
     font-weight: 500;
 }
 
+label{
+    color: rgb(255, 255, 255);
+    font-size: 1.4rem;
+    background-color: rgba(86, 84, 84, 0.548);
+}
+
 p{
     font-size: 1.2rem;
     color: rgb(90, 90, 90);
+    font-weight: 700;
 }
 
 li{

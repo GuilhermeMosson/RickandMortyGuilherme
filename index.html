@@ -14,10 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <img src="./Images/Rick-And-Morty-Logo.png" alt="logo" width="600px" height="auto">
+    <img src="./Images/Rick-And-Morty-Logo.png" alt="logo" width="700px" height="auto">
     <div>
         <label for="pageInput">Digite uma página de (1/42)</label>
-        <input type="text" id="pageInput" placeholder="página de (1/42)">
+        <input type="number" id="pageInput" placeholder="página de (1/42)">
         <button onclick="fethCharacters()">Mostrar personagens</button>
     </div>
 
@@ -89,7 +89,17 @@
 
             
         function searchByName(){
-            console.log('Standing by');
+            const searchName = document.getElementById('nameInput').value.toLowerCase();
+            const characters = document.querySelectorAll('.card');
+
+            characters.forEach((character) => {
+                const characterName = character.querySelector('h3').textContent.toLowerCase();
+                if(characterName.includes(searchName)){
+                    character.style.display = 'flex';
+                }else{
+                    character.style.display = 'none';
+                }
+            })
         }
     </script>
 </body>
